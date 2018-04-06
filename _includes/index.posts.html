@@ -1,7 +1,7 @@
 <section class="posts">
     <div class="wrap box">
         {% for post in paginator.posts %}
-        <figure class="figure J_Figure" style="background-image:url({{post.image}})"></figure>
+        <figure class="figure J_Figure" style="background-image:url({{site.baseurl}}{{post.image}})"></figure>
         {% endfor %}
     </div>
 </section>
