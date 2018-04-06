@@ -1,0 +1,64 @@
+<section class="posts">
+    <div class="wrap box">
+        {% for post in paginator.posts %}
+        <figure class="figure J_Figure" style="background-image:url({{post.image}})"></figure>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="pop-bg animated" id="J_PopBg"></div>
+<div class="pop animated" id="J_Pop">
+    <img class="pop-pic">
+</div>
+
+{% if paginator.total_pages > 1 %}
+<section class="pagination">
+    {% if paginator.previous_page %}
+    <a class="item previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000"
+            enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+            <g>
+                <path d="M241.5,453.5L665.9,29.1c25.5-25.5,67-25.5,92.5,0c25.5,25.5,25.5,67,0,92.5L380.1,500l378.3,378.3c25.5,25.5,25.5,67,0,92.5c-25.5,25.5-67,25.5-92.5,0L241.5,546.5c-12.8-12.8-19.1-29.6-19.1-46.5S228.7,466.4,241.5,453.5z"
+                />
+            </g>
+        </svg>
+    </a>
+    {% else %}
+    <span class="item previous">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000"
+            enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+            <g>
+                <path d="M241.5,453.5L665.9,29.1c25.5-25.5,67-25.5,92.5,0c25.5,25.5,25.5,67,0,92.5L380.1,500l378.3,378.3c25.5,25.5,25.5,67,0,92.5c-25.5,25.5-67,25.5-92.5,0L241.5,546.5c-12.8-12.8-19.1-29.6-19.1-46.5S228.7,466.4,241.5,453.5z"
+                />
+            </g>
+        </svg>
+    </span>
+    {% endif %}
+    <span class="item text"> {{paginator.page}} OF {{paginator.total_pages}}</span>
+    {% if paginator.next_page %}
+    <a class="item next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000"
+            enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+            <g>
+                <path d="M761.8,554.1C617.7,693.5,473.6,832.8,329.5,972c-59.3,57.4-147.8-35.8-88.2-93.4c128.3-124,256.5-247.9,384.7-371.9C497.1,378.4,368.2,250,239.3,121.8c-58.7-58.4,29.8-151.6,88.3-93.3c144.8,144,289.5,288.2,434.3,432.3C785.7,484.7,786.4,530.5,761.8,554.1z"
+                />
+            </g>
+        </svg>
+    </a>
+    {% else %}
+    <span class="item next">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000"
+            enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.sfont.cn </metadata>
+            <g>
+                <path d="M761.8,554.1C617.7,693.5,473.6,832.8,329.5,972c-59.3,57.4-147.8-35.8-88.2-93.4c128.3-124,256.5-247.9,384.7-371.9C497.1,378.4,368.2,250,239.3,121.8c-58.7-58.4,29.8-151.6,88.3-93.3c144.8,144,289.5,288.2,434.3,432.3C785.7,484.7,786.4,530.5,761.8,554.1z"
+                />
+            </g>
+        </svg>
+    </span>
+    {% endif %}
+</section>
+{% endif %}

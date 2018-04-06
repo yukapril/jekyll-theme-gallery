@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 20px;
+    color: #333;
+}
+
+.header {
+    border-bottom: 1px solid #eee;
+}
+
+.header .title {
+    padding: 20px 0;
+}
+
+.header .text {
+    font-size: 30px;
+    font-weight: 600;
+    vertical-align: bottom;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 960px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .wrap {
+        margin: 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+}
+
+.posts {
+    margin-top: 20px;
+}
+
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.box .figure {
+    margin-bottom: 20px;
+    width: 49%;
+    height: 300px;
+    overflow: hidden;
+    background: #eee;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .box .figure {
+        width: 100%;
+    }
+}
+
+.box .pic {
+    width: 100%;
+    float: left;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination svg {
+    width: 16px;
+    height: 16px;
+    fill: #c8cdd0;
+}
+
+.pagination .item {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 2px solid #c4c9cd;
+    color: #a3a6a9;
+}
+
+.pagination .previous {
+    border-right: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.pagination .next {
+    border-left: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.pagination .text {
+    border-left: 1px solid #e4e7e9;
+    border-right: 1px solid #e4e7e9;
+    color: #7a7f81;
+}
+
+.pop {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    display: none;
+    text-align: center;
+}
+
+.pop-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000b0;
+    display: none;
+}
+
+.pop .pop-pic {}
+
+.show {
+    display: block;
+}
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomOut {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.zoomOut {
+    -webkit-animation-name: zoomOut;
+    animation-name: zoomOut;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
